@@ -4,7 +4,6 @@ Created on Wed Mar 10 22:27:51 2021
 
 @author: gggg8
 """
-
 import pandas as pd
 from sklearn.cluster import KMeans
 from matplotlib import pyplot as plt
@@ -20,7 +19,6 @@ print(data)
 processed_data=data.copy()
 #label=data.pop('FiN')
 #name=data.pop('PN')
-
 
 from sklearn.preprocessing import StandardScaler
 
@@ -52,6 +50,7 @@ for i in range (1, 14):
 
        # 2행 3열을 가진 서브플롯 추가 (인덱스 = i)
        plt.tight_layout()
+
 
         # 서브플롯의 라벨링
        plt.xlabel('FileName')
