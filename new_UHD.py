@@ -28,6 +28,7 @@ fileSize = []
 isHidden = []
 lastWriteTime = []
 
+
 companyName = []
 fileDescription = []
 fileVersion = []
