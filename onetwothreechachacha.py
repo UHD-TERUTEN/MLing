@@ -49,19 +49,8 @@ tmp=data.values.tolist()
 
 samples=data
 # training data
-"""
-sentences = [['this', 'is', 'the', 'one','good', 'machine', 'learning', 'book'],
-            ['this', 'is',  'another', 'book'],
-            ['one', 'more', 'book'],
-            ['weather', 'rain', 'snow'],
-            ['yesterday', 'weather', 'snow'],
-            ['forecast', 'tomorrow', 'rain', 'snow'],
-            ['this', 'is', 'the', 'new', 'post'],
-            ['this', 'is', 'about', 'more', 'machine', 'learning', 'post'],  
-            ['and', 'this', 'is', 'the', 'one', 'last', 'post', 'book']]
-"""
-sentenceses=tmp
 
+sentenceses=tmp
 
 w2v = gensim.models.word2vec.Word2Vec(sentences=sentenceses,workers=32)
 sentences=vectorizer.fit(sentenceses)
