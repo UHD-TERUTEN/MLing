@@ -86,7 +86,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer, StandardScaler
 import pandas as pd
 import numpy as np
-data = pd.read_csv("F:\MLWS\\UHD\ML0607shibal.csv", encoding="utf-8", dtype=str, keep_default_na=False)
+data = pd.read_csv("F:\MLWS\\UHD\ML0607test.csv", encoding="utf-8", dtype=str, keep_default_na=False)
 
 
 # In[4]:

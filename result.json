@@ -1,8 +1,8 @@
 {
 	"environment_isWorkingTime": {
 		"(env_ERROR)": "NO",
-		"False": "NO",
-		"True": {
+		"FALSE": "NO",
+		"TRUE": {
 			"object_fileName": {
 				"(EMPTY)": "YES",
 				"0": "YES",
@@ -45,11 +45,9 @@
 				"DIC": "YES",
 				"DLL": {
 					"subject_creationTime": {
-						"131956152920000000": "YES",
-						"132593534853639939": "NO",
-						"132643244313030989": "YES",
-						"132643246170198194": "YES",
-						"132643246231891406": "YES"
+						"1.31956E+17": "YES",
+						"1.32594E+17": "NO",
+						"1.32643E+17": "YES"
 					}
 				},
 				"DLL\\3": "YES",
@@ -86,21 +84,21 @@
 				"db-wal": "YES",
 				"dic": "YES",
 				"dll": {
-					"subject_creationTime": {
-						"132434071176323989": "YES",
-						"132593529992165907": "YES",
-						"132593531214371350": "YES",
-						"132593531221392841": "YES",
-						"132593531418235010": "YES",
-						"132593534853639939": "NO",
-						"132602559731393330": "YES",
-						"132609655780000000": "YES",
-						"132630437283161552": "YES",
-						"132630437355245705": "YES",
-						"132643240373325661": "YES",
-						"132643244313030989": "YES",
-						"132643246170198194": "YES",
-						"132643246231891406": "YES"
+					"subject_fileName": {
+						"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe": "YES",
+						"C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeC2RClient.exe": "YES",
+						"C:\\Program Files\\KMPlayer 64X\\KMPlayer64.exe": "YES",
+						"C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE": "YES",
+						"C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE": "YES",
+						"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE": "YES",
+						"C:\\Windows\\System32\\SearchFilterHost.exe": "YES",
+						"C:\\Windows\\System32\\consent.exe": "YES",
+						"C:\\Windows\\System32\\dllhost.exe": "YES",
+						"C:\\Windows\\System32\\notepad.exe": "NO",
+						"C:\\Windows\\System32\\svchost.exe": "YES",
+						"C:\\Windows\\System32\\taskhostw.exe": "YES",
+						"C:\\Windows\\System32\\wermgr.exe": "YES",
+						"C:\\Windows\\splwow64.exe": "YES"
 					}
 				},
 				"dll\\1": "YES",
@@ -115,12 +113,10 @@
 				"html": "YES",
 				"ini": {
 					"subject_creationTime": {
-						"132593534853639939": "NO",
-						"132602559731152819": "YES",
-						"132609655780000000": "YES",
-						"132643244313030989": "YES",
-						"132643246170198194": "YES",
-						"132643246231891406": "YES"
+						"1.32594E+17": "NO",
+						"1.32603E+17": "YES",
+						"1.3261E+17": "YES",
+						"1.32643E+17": "YES"
 					}
 				},
 				"jar": "YES",
@@ -170,11 +166,11 @@
 				"toc": "YES",
 				"ttf": "YES",
 				"txt": {
-					"subject_creationTime": {
-						"132593530184282196": "YES",
-						"132593531214371350": "YES",
-						"132593534853639939": "NO",
-						"132609655780000000": "YES"
+					"subject_fileName": {
+						"C:\\Program Files\\KMPlayer 64X\\KMPlayer64.exe": "YES",
+						"C:\\Windows\\System32\\RuntimeBroker.exe": "YES",
+						"C:\\Windows\\System32\\notepad.exe": "NO",
+						"C:\\Windows\\System32\\svchost.exe": "YES"
 					}
 				},
 				"url": "YES",
