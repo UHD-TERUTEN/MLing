@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 import os
@@ -591,7 +587,7 @@ for data in subj_productVersion:
 
 
 
-
+''' test for compare which labelling wrong
 csv_file= open('F:\MLWS\ML0607Permission.csv', 'wt',encoding="utf-8-sig", newline='')
 w=csv.writer(csv_file)
 op_file=open('F:\MLWS\\UHD\ML0607.csv', 'rt', encoding = 'utf-8-sig')
@@ -638,7 +634,7 @@ for line in redir:
 csv_file.close()
 op_file.close()
 
-
+'''
 
 '''
 2021 산학 연계 프로젝트 발표 TERUTEN _ UHD 
