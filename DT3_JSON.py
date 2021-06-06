@@ -86,7 +86,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer, StandardScaler
 import pandas as pd
 import numpy as np
-data = pd.read_csv("F:\MLWS\\UHD\ML0607.csv", encoding="utf-8", dtype=str, keep_default_na=False)
+data = pd.read_csv("F:\MLWS\\UHD\ML0607shibal.csv", encoding="utf-8", dtype=str, keep_default_na=False)
 
 
 # In[4]:
@@ -117,25 +117,26 @@ def predict (df, example):
     #according to the decision tree
     #print(example[1])
     b='YES'
-    if str(example[1]) == '(env_ERROR)':
+    NO = "C:\\Windows\\System32\\notepad.exe"
+    if str(example[0]) == '(env_ERROR)':
         print("ERR")
         b="NO"
         
-    elif example[1] == 'FALSE':
+    elif example[0] == 'FALSE':
         print("FALSE")
         b="NO"
        
     else:
-        if example[3] == 'pptx':
+        if example[2] == 'pptx':
             print("PPT")
             b="NO"
             
-        elif example[3] == 'pdf':
+        elif example[2] == 'pdf':
             print("PDF")
             b="NO"
             
             
-        elif example[3] == 'NOTEPAD':
+        elif example[17] == NO:
             print("NOTEPAD")
             b="NO"
             
@@ -217,12 +218,11 @@ pprint.pprint(t)
 pprint.pprint(decisionTree)
 
 
-print("시발 좀 끝내자.")
 print(type(t))
 
 import json
 
-save_path="F:\MLWS\\UHD\\result.json"
+save_path="F:\git_workspace\\MLing\\result.json"
 with open (save_path, 'w', encoding='utf-8') as json_f:
     json.dump(t, json_f, indent="\t")
 

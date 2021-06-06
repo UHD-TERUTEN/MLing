@@ -57,7 +57,7 @@ subj_productVersion = []
 
 def get_data_from_json(line,file_name):
     try:
-        input_file.append(file_name)
+        
 
         json_line=json.loads(line)
 
@@ -156,12 +156,14 @@ def get_data_from_json(line,file_name):
         dict=json.loads(NewStr)
 
         input_file.append(dict['creationTime'])
-        
+        '''
         cut_extension=(dict['fileName'])
         extension_filename=cut_extension.split('.')[-1]
 
         input_file.append(extension_filename)
-
+        '''
+        input_file.append(dict['fileName'])
+        
         input_file.append(dict['fileSize'])
 
         input_file.append(dict['isHidden'])
@@ -232,93 +234,92 @@ def write_to_csv(input_file, dict):
         #ProductVer from TERUTEN-attribute
         input_file.append(dict['productVersion'])
         #add to array that has name of attribute same
-        if input_file[0] not in ProgramName:
-            ProgramName.append(input_file[0])
-            print("1")
-            print(ProgramName)
+
         
-        if input_file[1] not in isWorkingTime:
-            isWorkingTime.append(input_file[1])
+        if input_file[0] not in isWorkingTime:
+            isWorkingTime.append(input_file[0])
         
-        if input_file[2] not in obj_creationTime:
-            obj_creationTime.append(input_file[2])
-        if input_file[3] not in obj_fileName:
-            obj_fileName.append(input_file[3])
-        if str(input_file[4]) not in obj_fileSize:
-            obj_fileSize.append(str(input_file[4]))
-        if str(input_file[5]) not in obj_isHidden:
-            obj_isHidden.append(str(input_file[5]))
-        if input_file[6] not in obj_lastWriteTime:
-            obj_lastWriteTime.append(input_file[6])
+        if input_file[1] not in obj_creationTime:
+            obj_creationTime.append(input_file[1])
+        if input_file[2] not in obj_fileName:
+            obj_fileName.append(input_file[2])
+        if str(input_file[3]) not in obj_fileSize:
+            obj_fileSize.append(str(input_file[3]))
+        if str(input_file[4]) not in obj_isHidden:
+            obj_isHidden.append(str(input_file[4]))
+        if input_file[5] not in obj_lastWriteTime:
+            obj_lastWriteTime.append(input_file[5])
         
-        if input_file[7] not in obj_companyName:
-            obj_companyName.append(input_file[7])
-        if input_file[8] not in obj_fileDescription:
-            obj_fileDescription.append(input_file[8])
-        if input_file[9] not in obj_fileVersion:
-            obj_fileVersion.append(input_file[9])
-        if input_file[10] not in obj_internalName:
-            obj_internalName.append(input_file[10])
-        if input_file[11] not in obj_legalCopyright:
-            obj_legalCopyright.append(input_file[11])
-        if input_file[12] not in obj_originalFilename:
-            obj_originalFilename.append(input_file[12])
-        if input_file[13] not in obj_productName:
-            obj_productName.append(input_file[13])
-        if input_file[14] not in obj_productVersion:
-            obj_productVersion.append(input_file[14])
+        if input_file[6] not in obj_companyName:
+            obj_companyName.append(input_file[6])
+        if input_file[7] not in obj_fileDescription:
+            obj_fileDescription.append(input_file[7])
+        if input_file[8] not in obj_fileVersion:
+            obj_fileVersion.append(input_file[8])
+        if input_file[9] not in obj_internalName:
+            obj_internalName.append(input_file[9])
+        if input_file[10] not in obj_legalCopyright:
+            obj_legalCopyright.append(input_file[10])
+        if input_file[11] not in obj_originalFilename:
+            obj_originalFilename.append(input_file[11])
+        if input_file[12] not in obj_productName:
+            obj_productName.append(input_file[12])
+        if input_file[13] not in obj_productVersion:
+            obj_productVersion.append(input_file[13])
             
-        if str(input_file[15]) not in errorCode:
-            errorCode.append(str(input_file[15]))
-        if input_file[16] not in functionName:
-            functionName.append(input_file[16])
-        if str(input_file[17]) not in returnValue:
-            returnValue.append(str(input_file[17]))
+        if str(input_file[14]) not in errorCode:
+            errorCode.append(str(input_file[14]))
+        if input_file[15] not in functionName:
+            functionName.append(input_file[15])
+        if str(input_file[16]) not in returnValue:
+            returnValue.append(str(input_file[16]))
             
-        if input_file[18] not in subj_creationTime:
-            subj_creationTime.append(input_file[18])
-        if input_file[19] not in subj_fileName:
-            subj_fileName.append(input_file[19])
-        if str(input_file[20]) not in subj_fileSize:
-            subj_fileSize.append(str(input_file[20]))
-        if str(input_file[21]) not in subj_isHidden:
-            subj_isHidden.append(str(input_file[21]))
-        if input_file[22] not in subj_lastWriteTime:
-            subj_lastWriteTime.append(input_file[22]) 
+        if input_file[17] not in subj_creationTime:
+            subj_creationTime.append(input_file[17])
+        if input_file[18] not in subj_fileName:
+            subj_fileName.append(input_file[18])
+        if str(input_file[19]) not in subj_fileSize:
+            subj_fileSize.append(str(input_file[19]))
+        if str(input_file[20]) not in subj_isHidden:
+            subj_isHidden.append(str(input_file[20]))
+        if input_file[21] not in subj_lastWriteTime:
+            subj_lastWriteTime.append(input_file[21]) 
         #moduleInfo
-        if input_file[23] not in subj_companyName:
-            subj_companyName.append(input_file[23])
-        if input_file[24] not in subj_fileDescription:
-            subj_fileDescription.append(input_file[24])
-        if input_file[25] not in subj_fileVersion:
-            subj_fileVersion.append(input_file[25])
-        if input_file[26] not in subj_internalName:
-            subj_internalName.append(input_file[26])
-        if input_file[27] not in subj_legalCopyright:
-            subj_legalCopyright.append(input_file[27])
-        if input_file[28] not in subj_originalFilename:
-            subj_originalFilename.append(input_file[28])
-        if input_file[29] not in subj_productName:
-            subj_productName.append(input_file[29])
-        if input_file[30] not in subj_productVersion:
-            subj_productVersion.append(input_file[30])
+        if input_file[22] not in subj_companyName:
+            subj_companyName.append(input_file[22])
+        if input_file[23] not in subj_fileDescription:
+            subj_fileDescription.append(input_file[23])
+        if input_file[24] not in subj_fileVersion:
+            subj_fileVersion.append(input_file[24])
+        if input_file[25] not in subj_internalName:
+            subj_internalName.append(input_file[25])
+        if input_file[26] not in subj_legalCopyright:
+            subj_legalCopyright.append(input_file[26])
+        if input_file[27] not in subj_originalFilename:
+            subj_originalFilename.append(input_file[27])
+        if input_file[28] not in subj_productName:
+            subj_productName.append(input_file[28])
+        if input_file[29] not in subj_productVersion:
+            subj_productVersion.append(input_file[29])
         b="YES"
-        if '(ERROR)' in str(input_file[1]):
+        NO = "C:\\Windows\\System32\\notepad.exe"
+        if '(env_ERROR)' in str(input_file[0]):
             b="NO"
             print("에러노")
-        elif 'False' in str(input_file[1]):
+        elif 'False' in str(input_file[0]):
             b="NO"
             print("불펄스")
         else:
             print("불 트루")
-            if 'pptx' in input_file[3]:
-                print("PPTX")
+            if 'pptx' in input_file[2]:
+                print("PPTXdddd")
                 b="NO"
-            elif 'pdf' in input_file[3]:
-                print("pdf")
+            elif 'pdf' in input_file[2]:
+                print("pdfdddd")
                 b="NO"
-            elif 'NOTEPAD' in input_file[0]:
+            elif NO in input_file[18]:
                 print("메모장")
+                input('잉')
                 b="NO"
         input_file.append(b)
         wr=csv.writer(scv)
@@ -336,93 +337,92 @@ def write_to_csv(input_file, dict):
         input_file.append("(subj_module_ERROR)")
         input_file.append("(subj_module_ERROR)")
         input_file.append("(subj_module_ERROR)")
-        if input_file[0] not in ProgramName:
-            ProgramName.append(input_file[0])
-            print("1")
+        if input_file[0] not in isWorkingTime:
+            isWorkingTime.append(input_file[0])
         
-        if input_file[1] not in isWorkingTime:
-            isWorkingTime.append(input_file[1])
+        if input_file[1] not in obj_creationTime:
+            obj_creationTime.append(input_file[1])
+        if input_file[2] not in obj_fileName:
+            obj_fileName.append(input_file[2])
+        if str(input_file[3]) not in obj_fileSize:
+            obj_fileSize.append(str(input_file[3]))
+        if str(input_file[4]) not in obj_isHidden:
+            obj_isHidden.append(str(input_file[4]))
+        if input_file[5] not in obj_lastWriteTime:
+            obj_lastWriteTime.append(input_file[5])
         
-        if input_file[2] not in obj_creationTime:
-            obj_creationTime.append(input_file[2])
-        if input_file[3] not in obj_fileName:
-            obj_fileName.append(input_file[3])
-        if str(input_file[4]) not in obj_fileSize:
-            obj_fileSize.append(str(input_file[4]))
-        if str(input_file[5]) not in obj_isHidden:
-            obj_isHidden.append(str(input_file[5]))
-        if input_file[6] not in obj_lastWriteTime:
-            obj_lastWriteTime.append(input_file[6])    
+        if input_file[6] not in obj_companyName:
+            obj_companyName.append(input_file[6])
+        if input_file[7] not in obj_fileDescription:
+            obj_fileDescription.append(input_file[7])
+        if input_file[8] not in obj_fileVersion:
+            obj_fileVersion.append(input_file[8])
+        if input_file[9] not in obj_internalName:
+            obj_internalName.append(input_file[9])
+        if input_file[10] not in obj_legalCopyright:
+            obj_legalCopyright.append(input_file[10])
+        if input_file[11] not in obj_originalFilename:
+            obj_originalFilename.append(input_file[11])
+        if input_file[12] not in obj_productName:
+            obj_productName.append(input_file[12])
+        if input_file[13] not in obj_productVersion:
+            obj_productVersion.append(input_file[13])
             
-        if input_file[7] not in obj_companyName:
-            obj_companyName.append(input_file[7])
-        if input_file[8] not in obj_fileDescription:
-            obj_fileDescription.append(input_file[8])
-        if input_file[9] not in obj_fileVersion:
-            obj_fileVersion.append(input_file[9])
-        if input_file[10] not in obj_internalName:
-            obj_internalName.append(input_file[10])
-        if input_file[11] not in obj_legalCopyright:
-            obj_legalCopyright.append(input_file[11])
-        if input_file[12] not in obj_originalFilename:
-            obj_originalFilename.append(input_file[12])
-        if input_file[13] not in obj_productName:
-            obj_productName.append(input_file[13])
-        if input_file[14] not in obj_productVersion:
-            obj_productVersion.append(input_file[14])
-
-        if str(input_file[15]) not in errorCode:
-            errorCode.append(str(input_file[15]))
-        if input_file[16] not in functionName:
-            functionName.append(input_file[16])
-        if str(input_file[17]) not in returnValue:
-            returnValue.append(str(input_file[17]))
+        if str(input_file[14]) not in errorCode:
+            errorCode.append(str(input_file[14]))
+        if input_file[15] not in functionName:
+            functionName.append(input_file[15])
+        if str(input_file[16]) not in returnValue:
+            returnValue.append(str(input_file[16]))
             
-        if input_file[18] not in subj_creationTime:
-            subj_creationTime.append(input_file[18])
-        if input_file[19] not in subj_fileName:
-            subj_fileName.append(input_file[19])
-        if str(input_file[20]) not in subj_fileSize:
-            subj_fileSize.append(str(input_file[20]))
-        if str(input_file[21]) not in subj_isHidden:
-            subj_isHidden.append(str(input_file[21]))
-        if input_file[22] not in subj_lastWriteTime:
-            subj_lastWriteTime.append(input_file[22]) 
+        if input_file[17] not in subj_creationTime:
+            subj_creationTime.append(input_file[17])
+        if input_file[18] not in subj_fileName:
+            subj_fileName.append(input_file[18])
+        if str(input_file[19]) not in subj_fileSize:
+            subj_fileSize.append(str(input_file[19]))
+        if str(input_file[20]) not in subj_isHidden:
+            subj_isHidden.append(str(input_file[20]))
+        if input_file[21] not in subj_lastWriteTime:
+            subj_lastWriteTime.append(input_file[21]) 
         #moduleInfo
-        if input_file[23] not in subj_companyName:
-            subj_companyName.append(input_file[23])
-        if input_file[24] not in subj_fileDescription:
-            subj_fileDescription.append(input_file[24])
-        if input_file[25] not in subj_fileVersion:
-            subj_fileVersion.append(input_file[25])
-        if input_file[26] not in subj_internalName:
-            subj_internalName.append(input_file[26])
-        if input_file[27] not in subj_legalCopyright:
-            subj_legalCopyright.append(input_file[27])
-        if input_file[28] not in subj_originalFilename:
-            subj_originalFilename.append(input_file[28])
-        if input_file[29] not in subj_productName:
-            subj_productName.append(input_file[29])
-        if input_file[30] not in subj_productVersion:
-            subj_productVersion.append(input_file[30])
+        if input_file[22] not in subj_companyName:
+            subj_companyName.append(input_file[22])
+        if input_file[23] not in subj_fileDescription:
+            subj_fileDescription.append(input_file[23])
+        if input_file[24] not in subj_fileVersion:
+            subj_fileVersion.append(input_file[24])
+        if input_file[25] not in subj_internalName:
+            subj_internalName.append(input_file[25])
+        if input_file[26] not in subj_legalCopyright:
+            subj_legalCopyright.append(input_file[26])
+        if input_file[27] not in subj_originalFilename:
+            subj_originalFilename.append(input_file[27])
+        if input_file[28] not in subj_productName:
+            subj_productName.append(input_file[28])
+        if input_file[29] not in subj_productVersion:
+            subj_productVersion.append(input_file[29])
         #if DENY b is NO PERMITYES Make your rule to permit or deny 
         b="YES"
-        if '(ERROR)' in str(input_file[1]):
+        
+        NO = "C:\\Windows\\System32\\notepad.exe"
+        if '(env_ERROR)' in str(input_file[0]):
             b="NO"
             print("에러노")
-        elif 'False' in str(input_file[1]):
+        elif 'False' in str(input_file[0]):
             b="NO"
             print("불펄스")
         else:
             print("불 트루")
-            if 'pptx' in input_file[3]:
+            if 'pptx' in input_file[2]:
                 print("PPTXdddd")
                 b="NO"
-            elif 'pdf' in input_file[3]:
+            elif 'pdf' in input_file[2]:
                 print("pdfdddd")
                 b="NO"
-            elif 'NOTEPAD' in input_file[0]:
+            elif NO in input_file[18]:
                 print("메모장")
+                input('잉')
                 b="NO"
         input_file.append(b)
         print("write")
@@ -438,10 +438,10 @@ print(file_list[0])
 programName=[]
 i=0
 
-scv=open('F:\MLWS\\UHD\ML0607.csv','wt',encoding="utf-8-sig", newline='')
+scv=open('F:\MLWS\\UHD\ML0607finalexam.csv','wt',encoding="utf-8-sig", newline='')
 wr=csv.writer(scv)
 
-input_file=['ProgramName',
+input_file=[
      'environment_isWorkingTime',
      'object_creationTime','object_fileName','object_fileSize','object_isHidden','object_lastWriteTime',
     'object_companyName','object_fileDescription', 'object_fileVersion', 'object_internalName', 'object_legalCopyright', 'object_originalFilename', 'object_productName', 'object_productVersion',
@@ -459,9 +459,7 @@ scv.close()
 
 
 
-for data in ProgramName:
-    Main_list.append(data)
-
+'''
 for data in isWorkingTime:
     Main_list.append(data)
 
@@ -584,6 +582,8 @@ for data in subj_productName:
 for data in subj_productVersion:
     if data not in Main_list:
         Main_list.append(str(data))
+
+'''
 
 
 
