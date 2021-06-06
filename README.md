@@ -19,3 +19,4 @@
 - word2vec_kmeans.py: word2vec 활용하여 클러스터링 한 것
 - DT3_JSON.py: 의사 결정 트리 사용하여 기준 출력한 것 [input : csv// output : json]
 - data_to_csv.py: 모인 log.txt 데이터 활용하여 csv 파일로 만들며 라벨링
+- result.json: DT3_JSON.py 통해 나온 결과 json 파일
