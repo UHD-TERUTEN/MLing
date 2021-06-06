@@ -319,7 +319,6 @@ def write_to_csv(input_file, dict):
                 b="NO"
             elif NO in input_file[18]:
                 print("메모장")
-                input('잉')
                 b="NO"
         input_file.append(b)
         wr=csv.writer(scv)
@@ -422,7 +421,6 @@ def write_to_csv(input_file, dict):
                 b="NO"
             elif NO in input_file[18]:
                 print("메모장")
-                input('잉')
                 b="NO"
         input_file.append(b)
         print("write")
