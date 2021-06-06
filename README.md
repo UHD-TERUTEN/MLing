@@ -9,6 +9,9 @@
 ├── onetwothreechachacha.py
 ├── create_whitelist_.sql
 ├── word2vec_kmeans.py
+├── data_to_csv.py
+├── DT3_JSON.py
+├── result.json
 ...
 ```
 - SVM_TST.py: svm 진행 했던 것
