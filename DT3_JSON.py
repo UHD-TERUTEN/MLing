@@ -54,7 +54,6 @@ def buildTree(df,tree=None):
     #Get attribute with maximum information gain
     node = find_winner(df)
     
-    #Get distinct value of that attribute e.g Salary is node and Low,Med and High are values
     attValue = np.unique(df[node])
     
     #Create an empty dictionary to create tree    
@@ -62,8 +61,7 @@ def buildTree(df,tree=None):
         tree={}
         tree[node] = {}
     
-   #We make loop to construct a tree by calling this function recursively. 
-    #In this we check if the subset is pure and stops if it is pure. 
+
 
     for value in attValue:
         
@@ -88,7 +86,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer, StandardScaler
 import pandas as pd
 import numpy as np
-data = pd.read_csv("F:\MLWS\ML0518.csv", encoding='utf-8', dtype=str, keep_default_na=False)
+data = pd.read_csv("F:\MLWS\\UHD\ML0607.csv", encoding="utf-8", dtype=str, keep_default_na=False)
 
 
 # In[4]:
@@ -101,98 +99,130 @@ from numpy import log2 as log
 # In[5]:
 
 
-t=buildTree(data)
+df_train, df_test=train_test_split(data, test_size=0.4, random_state=29)
+data
 
 
 # In[6]:
 
 
-import pprint
-pprint.pprint(t)
+t=buildTree(data)
 
 
 # In[7]:
 
 
-print(t)
+def predict (df, example):
+    b = None
+    #according to the decision tree
+    #print(example[1])
+    b='YES'
+    if str(example[1]) == '(env_ERROR)':
+        print("ERR")
+        b="NO"
+        
+    elif example[1] == 'FALSE':
+        print("FALSE")
+        b="NO"
+       
+    else:
+        if example[3] == 'pptx':
+            print("PPT")
+            b="NO"
+            
+        elif example[3] == 'pdf':
+            print("PDF")
+            b="NO"
+            
+            
+        elif example[3] == 'NOTEPAD':
+            print("NOTEPAD")
+            b="NO"
+            
+    
+    #write testing results to dataset
+    correct=0
+    TP = 0
+    FP = 0
+    TN=0
+    FN=0
+    precesion = 0
+    if example[-1]==b:
+        correct = correct+1
+    if example[-1]=='YES':
+        if b =='YES':
+            print("TP")
+            TP= TP+1
+        elif b=='NO':
+            print("FP")
+            FP = FP + 1
+    else :
+        if b=="YES" :
+            print("FN")
+            FN=FN+1
+        else:
+            print("TN")
+            TN= TN+1
+    example.append(b)
+    #datasetFile.write(','.join(example))
+    return b, correct, TP, FP,TN,FN
 
 
 # In[8]:
 
 
-import json
+decisionTree = buildTree(df_train)
+
+#Test Cases
+testset = df_test
 
 
 # In[9]:
 
 
-type(t)
-print(t)
+#datasetFile.seek(387,0)
+tmp = 0
+correct =0
+TP=0
+FP=0
+TN=0
+FN=0
+for i in range(len(df_test)):
+    result=predict(data, list(df_test.iloc[i]))
+    ans = result[0]
+    correct = correct +  result[1]
+    print("Test case ",i,":",ans,"\n")
+    tmp = tmp +1
+    TP = result[2] + TP
+    FP = result[3] + FP
+    TN=result[4]+TN
+    FN=result[5]+FN
+print("====================PRECESION====================\n")
+print("TN : ", TN)
+print("FN : ", FN)
+print("TP : ", TP)
+print("FP : ", FP)
+print("Classification Precesion : ", TP/(TP+FP))
+print("\n==================ACCURACY======================\n")
+print("try : ", tmp)
+print("matched : ", correct)
+print("Classification Accuracy : ", correct/tmp)
 
 
 # In[10]:
 
 
-dic=json.dumps(t)
-
-'''
-        jsonStr=json.dumps(json_line, ensure_ascii=False)
-        dict=json.loads(jsonStr)
-'''
+import pprint
+pprint.pprint(t)
+pprint.pprint(decisionTree)
 
 
-# In[11]:
+print("시발 좀 끝내자.")
+print(type(t))
 
+import json
 
-type(dic)
-
-
-# In[12]:
-
-
-def DFS(t):
-    if()
-
-
-# In[ ]:
-
-
-getLastSong(dic)
-
-
-# In[ ]:
-
-
-def dfs(json_tree, index):
-    if json_tree[''] == index:
-        return json_tree['index']
-    if 'children' not in json_tree:
-        return None
-    for c in json_tree['children']:
-        result = dfs(c, index)
-        if result is not None:
-            return result
-    return None
-
-
-# In[ ]:
-
-
-type(t)
-
-
-# In[ ]:
-
-
-
-tbj= json.dumps(t)
-obj=json.loads(tbj)
-print(type(obj))
-obj.parse['isWorkingTime']
-
-
-# In[ ]:
-
-
-
+save_path="F:\MLWS\\UHD\\result.json"
+with open (save_path, 'w', encoding='utf-8') as json_f:
+    json.dump(t, json_f, indent="\t")
 
