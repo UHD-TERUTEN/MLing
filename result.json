@@ -1,6 +1,6 @@
 {
 	"environment_isWorkingTime": {
-		"(env_ERROR)": "YES",
+		"(env_ERROR)": "NO",
 		"False": "NO",
 		"True": {
 			"object_fileName": {
@@ -44,12 +44,12 @@
 				"DAT": "YES",
 				"DIC": "YES",
 				"DLL": {
-					"ProgramName": {
-						"EXCEL.EXE": "YES",
-						"KMPLoading.exe": "YES",
-						"NOTEPAD.EXE": "NO",
-						"POWERPNT.EXE": "YES",
-						"WINWORD.EXE": "YES"
+					"subject_creationTime": {
+						"131956152920000000": "YES",
+						"132593534853639939": "NO",
+						"132643244313030989": "YES",
+						"132643246170198194": "YES",
+						"132643246231891406": "YES"
 					}
 				},
 				"DLL\\3": "YES",
@@ -86,21 +86,21 @@
 				"db-wal": "YES",
 				"dic": "YES",
 				"dll": {
-					"ProgramName": {
-						"DllHost.exe": "YES",
-						"EXCEL.EXE": "YES",
-						"KMPlayer64.exe": "YES",
-						"NOTEPAD.EXE": "NO",
-						"OfficeC2RClient.exe": "YES",
-						"POWERPNT.EXE": "YES",
-						"SearchFilterHost.exe": "YES",
-						"WINWORD.EXE": "YES",
-						"consent.exe": "YES",
-						"msedge.exe": "YES",
-						"splwow64.exe": "YES",
-						"svchost.exe": "YES",
-						"taskhostw.exe": "YES",
-						"wermgr.exe": "YES"
+					"subject_creationTime": {
+						"132434071176323989": "YES",
+						"132593529992165907": "YES",
+						"132593531214371350": "YES",
+						"132593531221392841": "YES",
+						"132593531418235010": "YES",
+						"132593534853639939": "NO",
+						"132602559731393330": "YES",
+						"132609655780000000": "YES",
+						"132630437283161552": "YES",
+						"132630437355245705": "YES",
+						"132643240373325661": "YES",
+						"132643244313030989": "YES",
+						"132643246170198194": "YES",
+						"132643246231891406": "YES"
 					}
 				},
 				"dll\\1": "YES",
@@ -114,13 +114,13 @@
 				"htm": "YES",
 				"html": "YES",
 				"ini": {
-					"ProgramName": {
-						"EXCEL.EXE": "YES",
-						"KMPlayer64.exe": "YES",
-						"NOTEPAD.EXE": "NO",
-						"POWERPNT.EXE": "YES",
-						"SearchProtocolHost.exe": "YES",
-						"WINWORD.EXE": "YES"
+					"subject_creationTime": {
+						"132593534853639939": "NO",
+						"132602559731152819": "YES",
+						"132609655780000000": "YES",
+						"132643244313030989": "YES",
+						"132643246170198194": "YES",
+						"132643246231891406": "YES"
 					}
 				},
 				"jar": "YES",
@@ -170,11 +170,11 @@
 				"toc": "YES",
 				"ttf": "YES",
 				"txt": {
-					"ProgramName": {
-						"KMPlayer64.exe": "YES",
-						"NOTEPAD.EXE": "NO",
-						"RuntimeBroker.exe": "YES",
-						"svchost.exe": "YES"
+					"subject_creationTime": {
+						"132593530184282196": "YES",
+						"132593531214371350": "YES",
+						"132593534853639939": "NO",
+						"132609655780000000": "YES"
 					}
 				},
 				"url": "YES",
