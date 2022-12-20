@@ -4,7 +4,8 @@ import os
 import pandas as pd
 import json
 import csv
-path_dir = 'F:\LogGatherer\Logs'
+print(os.getcwd())
+path_dir = '/Users/gimdongju/Documents/workspace/git/embedded/Logs'
 
 file_list = os.listdir(path_dir)
 
